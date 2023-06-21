@@ -85,8 +85,7 @@ def train_SVD_model(df_real_users, df_real_events):
 
     #PREDICTIONS only on the real users and real events
     
-    results = make_predictions(df_real_users, df_real_events, data, 19)
-                                #gs_svd.best_params['rmse']["n_factors"])
+    results = make_predictions(df_real_users, df_real_events, data, gs_svd.best_params['rmse']["n_factors"])
     return results
 
 def make_predictions(df_real_users, df_real_events, data, n_factors):
